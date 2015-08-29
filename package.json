@@ -1,0 +1,19 @@
+{
+  "name": "sshbot",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codydaig/sshbot.git"
+  },
+  "author": "Cody B. Daig",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codydaig/sshbot/issues"
+  },
+  "homepage": "https://github.com/codydaig/sshbot#readme"
+}
