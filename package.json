@@ -15,6 +15,9 @@
   "bugs": {
     "url": "https://github.com/codydaig/sshbot/issues"
   },
+  "bin": {
+    "sbot": "index"
+  },
   "homepage": "https://github.com/codydaig/sshbot#readme",
   "devDependencies": {
     "expect.js": "^0.3.1",
@@ -23,6 +26,10 @@
     "run-sequence": "^1.1.2"
   },
   "dependencies": {
-    "express": "^4.13.3"
+    "c.log": "0.0.3",
+    "commander": "^2.8.1",
+    "express": "^4.13.3",
+    "request": "^2.61.0",
+    "xml2js": "^0.4.11"
   }
 }
