@@ -2,6 +2,7 @@
 
 var clog = require('c.log');
 var commander = require('commander');
+var r = require('rethinkdb');
 var request = require('request');
 var xml2js = require('xml2js');
 
@@ -27,6 +28,20 @@ commander
           }
         });
       }
+    });
+  });
+
+commander
+  .command('block <ip>')
+  .description('Blocks a specified ip from all HackFoCo Servers.')
+  .action(function (ip) {
+    r.connect({ host: 'localhost', port: 28015 }, function (err, conn) {
+      if(err) throw err;
+      r.db('sshbot').table('ipBlocks').insert({ ip: ip }).run(conn, function (err, res) {
+        if(err) throw err;
+        clog.green('Blocked ' + ip);
+        conn.close(function (err) { if (err) throw err; })
+      });
     });
   });
 
